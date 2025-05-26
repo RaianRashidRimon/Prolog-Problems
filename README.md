@@ -12,3 +12,4 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
 
 
     Addition Of Two Numbers
+    Subtraction Of Two Numbers
