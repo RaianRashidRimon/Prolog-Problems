@@ -15,4 +15,5 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Subtraction Of Two Numbers
     Multiplication Of Two Numbers
     Division
+    Sum Of Array Value
     
