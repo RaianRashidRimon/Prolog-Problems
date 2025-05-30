@@ -16,4 +16,5 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Multiplication Of Two Numbers
     Division
     Sum Of Array Value
+    Max Value In An Array
     
