@@ -18,4 +18,5 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Sum Of Array Value
     Max Value In An Array
     Length of Array
+    X to the power of Y
     
