@@ -19,4 +19,5 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Max Value In An Array
     Length of Array
     X to the power of Y
+    Quadratic Root
     
