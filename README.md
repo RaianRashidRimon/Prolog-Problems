@@ -20,4 +20,5 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Length of Array
     X to the power of Y
     Quadratic Root
+    Modulus Operation
     
