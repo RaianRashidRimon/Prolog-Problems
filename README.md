@@ -24,4 +24,6 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Modulus Operation
     OR Operation
     AND Operation
+    Bitwise Left Shift
+    
     
