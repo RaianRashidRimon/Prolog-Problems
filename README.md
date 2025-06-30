@@ -28,6 +28,7 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Bitwise Right Shift
     Bitwise Left Shift
     Bitwise Complement
+    Breadth-First Search
 
 
 
