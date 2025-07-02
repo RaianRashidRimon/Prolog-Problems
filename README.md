@@ -30,6 +30,7 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Bitwise Complement
     Breadth-First Search
     Depth-First Search
+    Semester Information System
 
 
 
