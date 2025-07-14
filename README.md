@@ -32,6 +32,7 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Depth-First Search
     Semester Information System
     Family Tree Construction
+    Supermall Catalog
 
 
 
