@@ -49,9 +49,12 @@ item(shaving_cream, 350).
 item(deodorant, 500).
 item(perfume, 1200).
 
-% Rule to calculate the total cost of multiple items
-total_cost([], 0). % Base case: Empty list, cost is 0.
+
+
+
+
+total_cost([], 0).
 total_cost([Item|Rest], Total) :-
-    item(Item, Price),        % Get price of the current item
-    total_cost(Rest, Subtotal), % Recursively calculate remaining items' cost
+    item(Item, Price), 
+    total_cost(Rest, Subtotal), 
     Total is Price + Subtotal. % Sum up prices
