@@ -11,13 +11,13 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
 # 📋 Problems Include
 
 
-    Addition Of Two Numbers
-    Subtraction Of Two Numbers
-    Multiplication Of Two Numbers
+    Addition of Two Numbers
+    Subtraction of Two Numbers
+    Multiplication of Two Numbers
     Division
-    GDC Of Two Numbers
-    Sum Of Array Value
-    Max Value In An Array
+    GDC of Two Numbers
+    Sum of Array Value
+    Max Value on an Array
     Length of Array
     X to the power of Y
     Quadratic Root
@@ -34,6 +34,7 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Family Tree Construction
     Supermall Catalog
     Traveling Salesman
+    Traveling Salesman with Genetic Algorithm
 
 
 
