@@ -35,6 +35,7 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Supermall Catalog
     Traveling Salesman
     Traveling Salesman with Genetic Algorithm
+    N Queen Problem
 
 
 
