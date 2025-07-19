@@ -14,7 +14,7 @@ distances(X, X, 0).
 
 cities([a, b, c, d]).
 
-% Tour distance
+
 tour_distance([_], _, 0).
 tour_distance([City1, City2 | Rest], _, Distance) :-
     distances(City1, City2, D1),
@@ -25,22 +25,32 @@ tour_distance(Tour, Distance) :-
     Tour = [First | _],
     tour_distance(ClosedTour, _, Distance).
 
-% Random tour
+
+
+
 random_tour(Tour) :-
     cities(Cities),
     random_permutation(Cities, Tour).
 
-% Population
+
+
+
+
 generate_population(Size, Population) :-
     length(Population, Size),
     maplist(random_tour, Population).
 
-% Fitness
+
+    
 fitness(Tour, Fitness) :-
     tour_distance(Tour, Distance),
     (Distance =:= 0 -> Fitness = 0; Fitness is 10000 / Distance).
 
-% Tournament selection
+
+
+
+
+
 tournament_selection(Population, Parent) :-
     random(1, 5, K),
     length(Population, PopSize),
@@ -51,7 +61,8 @@ tournament_selection(Population, Parent) :-
     nth1(Index, Fitnesses, MaxFitness),
     nth1(Index, Candidates, Parent).
 
-% Ordered crossover
+
+
 ordered_crossover(Parent1, Parent2, Child) :-
     length(Parent1, Len),
     random(1, Len, Start),
@@ -67,7 +78,9 @@ ordered_crossover(Parent1, Parent2, Child) :-
     append(Temp, Segment, Child),
     append(Before, After, Remaining).
 
-% Segment
+
+
+
 segment(Start, End, List, Segment) :-
     Start1 is Start - 1,
     length(Before, Start1),
@@ -76,7 +89,9 @@ segment(Start, End, List, Segment) :-
     length(Segment, SegLen),
     append(Segment, _, Rest).
 
-% Mutation
+
+
+
 mutate(Tour, Mutated) :-
     length(Tour, Len),
     random(1, Len, I),
@@ -88,14 +103,17 @@ mutate(Tour, Mutated) :-
     replace(J, CityI, Temp, Mutated).
 mutate(Tour, Tour).
 
-% Replace
+
+
 replace(1, X, [_ | T], [X | T]).
 replace(N, X, [H | T], [H | R]) :-
     N > 1,
     N1 is N - 1,
     replace(N1, X, T, R).
 
-% New generation
+
+
+
 new_generation(Population, NewPopulation) :-
     length(Population, PopSize),
     length(NewPopulation, PopSize),
@@ -111,14 +129,14 @@ generate_new_population(N, Population, [Child | Rest]) :-
     N1 is N - 1,
     generate_new_population(N1, Population, Rest).
 
-% Best tour
+
 best_tour(Population, BestTour, BestDistance) :-
     maplist(tour_distance, Population, Distances),
     min_list(Distances, BestDistance),
     nth1(Index, Distances, BestDistance),
     nth1(Index, Population, BestTour).
 
-% Genetic algorithm
+
 genetic_tsp(PopSize, Generations, BestTour, BestDistance) :-
     generate_population(PopSize, Population),
     evolve(PopSize, Generations, Population, BestTour, BestDistance).
@@ -131,7 +149,12 @@ evolve(PopSize, Gen, Population, BestTour, BestDistance) :-
     Gen1 is Gen - 1,
     evolve(PopSize, Gen1, NewPopulation, BestTour, BestDistance).
 
-% Run
+
+
+
+
+
+
 run_tsp :-
     PopSize = 50,
     Generations = 100,
