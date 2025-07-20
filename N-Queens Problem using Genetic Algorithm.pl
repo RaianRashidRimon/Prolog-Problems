@@ -1,16 +1,15 @@
-% N-Queens Problem Using Genetic Algorithm in Prolog
-
-% Entry point to solve the N-Queens problem
 solve_n_queens(N) :-
     generate_population(100, N, Population),
     max_generations(MaxGenerations),
     evolve(Population, 0, MaxGenerations, Solution),
     format('Solution found: ~w~n', [Solution]).
 
-% Maximum generations to run the algorithm
+
 max_generations(1000).
 
-% Generate initial population of size Num
+
+
+
 generate_population(0, _, []) :- !.
 generate_population(Num, N, [Individual|Rest]) :-
     Num > 0,
@@ -18,12 +17,13 @@ generate_population(Num, N, [Individual|Rest]) :-
     NewNum is Num - 1,
     generate_population(NewNum, N, Rest).
 
-% Generate a random individual (a permutation of [1..N])
+
 generate_individual(N, Individual) :-
     numlist(1, N, L),
     random_permutation(L, Individual).
 
-% Fitness function: counts the number of non-attacking queen pairs
+
+
 fitness(Individual, Score) :-
     findall((I, J),
             (nth1(I, Individual, Qi),
@@ -33,7 +33,9 @@ fitness(Individual, Score) :-
             SafePairs),
     length(SafePairs, Score).
 
-% Evolution loop with max generation count
+
+
+
 evolve(Population, _, _, Solution) :-
     member(Solution, Population),
     fitness(Solution, Score),
@@ -54,13 +56,11 @@ evolve(Population, Generation, MaxGeneration, Solution) :-
     NewGeneration is Generation + 1,
     evolve(MutatedChildren, NewGeneration, MaxGeneration, Solution).
 
-% Evaluate each individual with fitness
 evaluate_population([], []).
 evaluate_population([Individual|Rest], [(Score, Individual)|EvaluatedRest]) :-
     fitness(Individual, Score),
     evaluate_population(Rest, EvaluatedRest).
 
-% Select top 50% as parents
 select_parents(ScoredPopulation, Parents) :-
     sort(0, @>=, ScoredPopulation, Sorted),
     length(Sorted, Len),
@@ -68,7 +68,9 @@ select_parents(ScoredPopulation, Parents) :-
     length(Parents, Half),
     append(Parents, _, Sorted).
 
-% Crossover selected parents to create children
+
+
+
 crossover_population([], []).
 crossover_population([(_, P1), (_, P2)|Rest], [Child1, Child2|Children]) :-
     crossover(P1, P2, Child1),
@@ -76,7 +78,9 @@ crossover_population([(_, P1), (_, P2)|Rest], [Child1, Child2|Children]) :-
     crossover_population(Rest, Children).
 crossover_population(_, []).  % In case of odd number, ignore last
 
-% Crossover operation (Order Crossover)
+
+
+
 crossover(P1, P2, Child) :-
     length(P1, Len),
     random_between(1, Len, Start),
@@ -107,7 +111,7 @@ insert_segment_helper([R|Rs], Segment, Start, Index, Acc, Result) :-
     NewIndex is Index + 1,
     insert_segment_helper(Rs, Segment, Start, NewIndex, NewAcc, Result).
 
-% Mutation: swap two random positions
+
 mutate_population([], []).
 mutate_population([Ind|Rest], [Mutated|MutatedRest]) :-
     maybe_mutate(Ind, Mutated),
@@ -137,7 +141,13 @@ set_nth([H|T], N, X, [H|R]) :-
     N1 is N - 1,
     set_nth(T, N1, X, R).
 
-% maybe(P) is true with probability P
+
+
+
+
+
+
+
 maybe(P) :-
     random(R),
     R < P.
