@@ -37,6 +37,7 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     Traveling Salesman with Genetic Algorithm
     N-Queen Problem
     N-Queen Problem with Genetic Algorithm
+    N-Queen Problem with Hill Climbing Search
 
 
 
