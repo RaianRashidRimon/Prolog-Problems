@@ -1,7 +1,5 @@
-% Define the goal state
 goal([1,2,3,4,5,6,7,8,0]).
 
-% Possible moves: left, right, up, down
 move([A,B,C,D,E,F,G,H,0], left,  [A,B,C,D,E,0,G,H,F]).
 move([A,B,C,D,E,F,G,0,I], left,  [A,B,C,D,0,F,G,E,I]).
 move([A,B,C,D,0,F,G,H,I], left,  [A,B,C,0,D,F,G,H,I]).
@@ -20,15 +18,18 @@ move([A,B,C,D,0,F,G,H,I], down,  [A,B,C,D,H,F,G,0,I]).
 move([A,B,C,0,E,F,G,H,I], down,  [A,B,C,G,E,F,0,H,I]).
 move([A,B,C,D,E,0,G,H,I], left,  [A,B,C,D,0,E,G,H,I]).
 
-% BFS: solve(State, SolutionPath)
+
+
+
+
+
+
 solve(Start, Solution) :-
     bfs([[Start]], [], Solution).
 
-% BFS base case: found goal
 bfs([[State | Path] | _], _, [State | Path]) :-
     goal(State).
 
-% BFS step
 bfs([[State | Path] | Rest], Visited, Solution) :-
     findall([Next, State | Path],
             (move(State, _, Next), \+ member(Next, [State | Path]), \+ member(Next, Visited)),
