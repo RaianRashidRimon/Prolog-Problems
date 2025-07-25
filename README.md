@@ -41,6 +41,11 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     8 Puzzle Problem
 
 
+## 🎯 Purpose
+This repository provides a practical approach to learning core concepts in Artificial Intelligence using Prolog. It features a collection of classic AI problems such as N-Queens, Genetic Algorithm, 8 Puzzle etc, all implemented through declarative programming. 
+
+It is designed for students, educators, and anyone interested in exploring how AI techniques can be expressed and solved using Prolog.
+
 
 
     
