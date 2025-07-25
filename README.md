@@ -46,7 +46,12 @@ This repository provides a practical approach to learning core concepts in Artif
 
 It is designed for students, educators, and anyone interested in exploring how AI techniques can be expressed and solved using Prolog.
 
+## 📌 Usage
+1. Clone the repository:
 
+   git clone `https://github.com/RaianRashidRimon/Digital-Image-Processing.git`
+   
+3. Navigate to the folder and run the desired code in SWE-Prolog.
 
     
     
