@@ -49,9 +49,9 @@ It is designed for students, educators, and anyone interested in exploring how A
 ## 📌 Usage
 1. Clone the repository:
 
-   git clone `https://github.com/RaianRashidRimon/Digital-Image-Processing.git`
+   git clone `https://github.com/RaianRashidRimon/Prolog-Problems.git`
    
-3. Navigate to the folder and run the desired code in SWE-Prolog.
+3. Navigate to the folder and run the desired code in SWI-Prolog.
 
     
     
