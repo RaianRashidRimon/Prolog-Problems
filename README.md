@@ -8,7 +8,7 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
        https://www.swi-prolog.org/download/stable
 
 
-# 📋 Problems Include
+# 📋 Problems
 
 
     Addition of Two Numbers
