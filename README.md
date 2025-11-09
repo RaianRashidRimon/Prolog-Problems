@@ -3,12 +3,12 @@ This repository contains a collection of practical Prolog programming exercises 
 
 
 
-## 🔧 Prerequisite
+## Prerequisite
 To run Prolog problems, it is necessary to install SWI-Prolog. Install the software from    
        https://www.swi-prolog.org/download/stable
 
 
-## 📋 Problems
+## Problems
 
 
     Addition of Two Numbers
@@ -41,12 +41,12 @@ To run Prolog problems, it is necessary to install SWI-Prolog. Install the softw
     8 Puzzle Problem
 
 
-## 🎯 Purpose
+## Purpose
 This repository provides a practical approach to learning core concepts in Artificial Intelligence using Prolog. It features a collection of classic AI problems such as N-Queens, Genetic Algorithm, 8 Puzzle etc, all implemented through declarative programming. 
 
 It is designed for students, educators, and anyone interested in exploring how AI techniques can be expressed and solved using Prolog.
 
-## 📌 Usage
+## Usage
 1. Clone the repository:
 
    git clone `https://github.com/RaianRashidRimon/Prolog-Problems.git`
@@ -54,7 +54,7 @@ It is designed for students, educators, and anyone interested in exploring how A
 3. Navigate to the folder and run the desired code in SWI-Prolog.
 
 
-## 🤝 Contribution
+## Contribution
 Contributions are highly encouraged! If you identify any issues, have suggestions for improvement, or want to add new algorithms, feel free to:
 1. Open an issue describing the problem or suggestions.
 2. Fork the repository, implement your changes and create a pull request. 
